@@ -1,0 +1,5 @@
+tipo: Periodo (T), formula: T = 1 / f, parametros: f es 12.0, resultado: 0.08333333333333333
+tipo: Velocidad angular(w), formula: W = (2 * 3.14) * f, parametros: f es 12.0, y resultado: 75.39822368615503
+tipo: Fuerza resultante(FR), formula: FR = m * a, parametros: M es 12.0; A es 5.0, resultado: es 60.0
+tipo: Energía cinética (EC), formula: EC = (0.5 * m) * v^2, parametros: M es 12.0; V es 5.0, resultado: 150.0
+tipo: Energía potencial (EP), formula: 'EP = m * g * h', parametros: M es 12.0; H es 5.0; G es 9.8, resultado: 588.0

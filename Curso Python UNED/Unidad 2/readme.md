@@ -3,26 +3,24 @@
 ## Ruta de aprendizaje - Unidad 2
 ---
 - Duración: 1 semana
-- *** Semana 0: *** 08 de febrero al 14 de febrero de 2023
+- *** Semana 2: *** 22 de febrero al 28 de febrero de 2023
 ---
 #### Objetivo de aprendizaje
-- Explorar la plataforma
-- Conocer la metodología, evaluación y demás elementos del curso.
+- Resolver casos básicos de programación para aplicaciones de consola.
 
 ---
 #### Contenidos y recursos
-- Programa del curso.
-- Ruta de aprendizaje.
-- Recursos importantes.
+- Tipos y estructuras de datos
+- Bloques y estructuras de control
+- Depuración de aplicaciones
 
 ---
 #### ¿Qué debo hacer?
 - Leer todos los recursos de la unidad.
-- Realice la tarea de prueba, *antes de las 11:55 pm del 14 de febrero de 2023.*
+- Realice la caso de estudio 1, *antes de las 11:55 pm del 28 de febrero de 2023.*
 - Participe en el foro de bienvenida, *antes de las 11:55 pm del 14 de febrero de 2023.*
 - Foro de consultas. Tome en cuenta que se habilita por módulo finaliza el último día del mismo.
 
 ---
 #### ¿Qué se va a Evaluar?
-- Tarea de Prueba. *_ Valor formativo _*
-- Foro de Bienvenida. *Valor formativo*
+- Caso de estudio 1. *Valor 20%*

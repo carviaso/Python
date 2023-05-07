@@ -2,27 +2,32 @@
 ## I Cuatrimestre 2023.
 ## Ruta de aprendizaje - Unidad 5
 ---
-- Duración: 1 semana
-- *** Semana 0: *** 08 de febrero al 14 de febrero de 2023
+- Duración: 4 semana
+- *** Semana 7: *** 29 de marzo al 11 de abril de 2023
+- *** Semana (Semana Santa): *** 03 de abril al 09 de abril de 2023
+- *** Semana 8: *** 12 de abril al 18 de abril de 2023
+- *** Semana 9: *** 19 de abril al 25 de abril de 2023
 ---
 #### Objetivo de aprendizaje
-- Explorar la plataforma
-- Conocer la metodología, evaluación y demás elementos del curso.
+- Desarrollar aplicaciones con orientación a objetos para resolución de necesidades específicas de usuarios.
 
 ---
 #### Contenidos y recursos
-- Programa del curso.
-- Ruta de aprendizaje.
-- Recursos importantes.
+- Orientación a Objetos con Python
+- Clases y objetos
+- Herencia
+- Encapsulación
+- Polimorfismo
 
 ---
 #### ¿Qué debo hacer?
 - Leer todos los recursos de la unidad.
-- Realice la tarea de prueba, *antes de las 11:55 pm del 14 de febrero de 2023.*
-- Participe en el foro de bienvenida, *antes de las 11:55 pm del 14 de febrero de 2023.*
+- Realice la tarea de prueba, *antes de las 11:55 pm del 18 de abril de 2023.*
+- Realice la tarea de prueba, *antes de las 11:55 pm del 25 de abril de 2023.*
 - Foro de consultas. Tome en cuenta que se habilita por módulo finaliza el último día del mismo.
 
 ---
 #### ¿Qué se va a Evaluar?
-- Tarea de Prueba. *_ Valor formativo _*
-- Foro de Bienvenida. *Valor formativo*
+- Prueba Corta 2. *Valor 8%*
+- Prueba Corta 3. *Valor 10%*
+- Evaluación Curso. *Valor 2%*

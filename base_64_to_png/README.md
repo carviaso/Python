@@ -1,4 +1,15 @@
-# How to Convert Base64 Image To Png in Python
+# Antes del proyecto
+Ejecute esto para 
+```
+python.exe -m venv venv
+```
+
+despues de ejecutado corra en la ruta del proyecto
+```
+venv/Scripts/activate.bat
+```
+
+# How to Convert Base64 Image To Png in Python [Import base64 Module](https://morioh.com/p/6427a97d4e81)
 
   In this python tutorial we will learn about how to convert base64 image to png in python. We will look at an example of how to convert base64 to png image in python. you will learn how to convert base64 string to png in python. we will help you to give an example of how to decode base64 string to png in python. Alright, let us dive into the details.
 

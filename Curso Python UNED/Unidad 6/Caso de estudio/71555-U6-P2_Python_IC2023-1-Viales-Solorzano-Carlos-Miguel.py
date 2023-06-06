@@ -1,5 +1,6 @@
-from Vuelos import Vuelos
 import openpyxl
+
+from Vuelos import Vuelos
 
 vuelos = []
 

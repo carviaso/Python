@@ -1,6 +1,6 @@
 import os
 
-constant nombre_archivo
+global nombre_archivo
 
 
 # ------------------------------------------------------------

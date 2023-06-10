@@ -16,6 +16,7 @@ from datetime import date
 import locale
 
 locale.setlocale(locale.LC_ALL, 'es_CR.UTF-8')
+global nombre_archivo
 
 
 # ---------------------------------------------------------------------------------------------

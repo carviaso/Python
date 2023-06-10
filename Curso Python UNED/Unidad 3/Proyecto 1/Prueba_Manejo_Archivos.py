@@ -63,22 +63,26 @@ def main():
         print("1. Abrir archivo\n2. Eliminar cálculo\n3. Mostrar archivo\n4. Guardar información en archivo\n5. Salir")
         try:
             opcion = int(input("Seleccione una opción: "))
-        
+
             if opcion == 1:
-                nombre_archivo = input("Ingrese el nombre del archivo a abrir: ")
+                nombre_archivo = input(
+                    "Ingrese el nombre del archivo a abrir: ")
                 abrir_archivo(nombre_archivo)
 
             elif opcion == 2:
                 nombre_archivo = input("Ingrese el nombre del archivo: ")
-                numero_linea = int(input("Ingrese el número de línea a eliminar: "))
+                numero_linea = int(
+                    input("Ingrese el número de línea a eliminar: "))
                 eliminar_calculo(nombre_archivo, numero_linea)
 
             elif opcion == 3:
-                nombre_archivo = input("Ingrese el nombre del archivo a mostrar: ")
+                nombre_archivo = input(
+                    "Ingrese el nombre del archivo a mostrar: ")
                 mostrar_archivo(nombre_archivo)
 
             elif opcion == 4:
-                nombre_archivo = input("Ingrese el nombre del archivo a guardar: ")
+                nombre_archivo = input(
+                    "Ingrese el nombre del archivo a guardar: ")
                 datos = input("Ingrese los datos a guardar: ")
                 guardar_archivo(nombre_archivo, datos)
 
@@ -87,7 +91,7 @@ def main():
 
             else:
                 print("Opción inválida.")
-        
+
         except ValueError:
             print("Valor no valido")
 

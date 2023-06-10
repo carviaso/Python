@@ -24,7 +24,7 @@ def abrir_archivo(nombre_archivo):
 
 
 # ------------------------------------------------------------
-def delete_line(nombre_archivo, numero_linea):
+def eliminar_calculo(nombre_archivo, numero_linea):
     try:
         with open(nombre_archivo, 'r') as archivo:
             lineas = archivo.readlines()

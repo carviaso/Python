@@ -1,5 +1,7 @@
 import os
 
+constant nombre_archivo
+
 
 # ------------------------------------------------------------
 def open_file_and_display(nombre_archivo):

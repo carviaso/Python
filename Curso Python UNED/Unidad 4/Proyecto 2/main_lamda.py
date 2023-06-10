@@ -5,16 +5,24 @@ from datetime import datetime
 # Función para validar el nombre completo
 validate_name = lambda name: len(name) > 9
 
+
 # Función para validar el correo electrónico
+# ---------------------------------------------------------------------------------------------
 validate_email = lambda email: '@' in email and '.' in email.split('@')[1]
 
+
 # Función para validar la edad
+# ---------------------------------------------------------------------------------------------
 validate_birthyear = lambda year: datetime.now().year - year >= 18
 
+
 # Función para validar la provincia
+# ---------------------------------------------------------------------------------------------
 validate_province = lambda province: province in ["San Jose", "Alajuela", "Cartago", "Heredia", "Guanacaste", "Puntarenas", "Limon"]
 
+
 # Función para validar el número de teléfono
+# ---------------------------------------------------------------------------------------------
 validate_phone = lambda phone: str(phone).isdigit() and str(phone).startswith(('2', '4', '6', '7', '8')) and len(str(phone)) == 8
 # ====================================================
 # Fin - Funciones lambda para validar cada campo

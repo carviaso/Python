@@ -14,13 +14,16 @@ Referencias:
 
 ''' Para referencia de funcion en la pagina https://www.geeksforgeeks.org/find-average-list-python/'''
 
-
+# ---------------------------------------------------------------------------------------------
 # Python program to get average of a list
+# ---------------------------------------------------------------------------------------------
 def Average(lst):
     return sum(lst) / len(lst)
 
 
+# ---------------------------------------------------------------------------------------------
 # Informacion del Programa del Case de estudio de la Unidad 2
+# ---------------------------------------------------------------------------------------------
 print("Universidad Estatal a Distancia (UNED)")
 print("Código 71555 - PROGRAMACIÓN BÁSICA CON PYTHON - IC2023")
 print("----")

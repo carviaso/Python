@@ -16,7 +16,9 @@ archivo = "archivo.txt"
 import os
 
 
+# ---------------------------------------------------------------------------------------------
 # Funcion de la lectura del archivo
+# ---------------------------------------------------------------------------------------------
 def procesar_archivo(nombre_archivo, separador, caracter_a_reemplazar, caracter_nuevo):
     with open(nombre_archivo, 'r') as archivo:
         line_num = 0
@@ -32,6 +34,7 @@ def procesar_archivo(nombre_archivo, separador, caracter_a_reemplazar, caracter_
     return lineas_procesadas
 
 
+# ---------------------------------------------------------------------------------------------
 def delete_line(nombre_archivo, numero_linea):
     try:
         with open(nombre_archivo, 'r') as archivo:
@@ -48,30 +51,33 @@ def delete_line(nombre_archivo, numero_linea):
 
 while True:
     """ Manejo de archivo """
-    # Solicita el nombre del archivo a crear
-    archivo = input("Ingrese el nombre del archivo a abrir: ")
+    try:
+        # Solicita el nombre del archivo a crear
+        archivo = input("Ingrese el nombre del archivo a abrir: ")
 
-    # Validar la extensión del archivo
-    if not archivo.endswith(".txt"):
-        archivo += ".txt"
+        # Validar la extensión del archivo
+        if not archivo.endswith(".txt"):
+            archivo += ".txt"
 
-    # Verificar si el archivo existe
-    if os.path.exists(archivo):
-        # Leer el contenido del archivo
-        lineas = procesar_archivo(archivo, ':', ',', ';')
-        print("El contenido del archivo es:")
-        for linea in lineas:
-            print(linea)
+        # Verificar si el archivo existe
+        if os.path.exists(archivo):
+            # Leer el contenido del archivo
+            lineas = procesar_archivo(archivo, ':', ',', ';')
+            print("El contenido del archivo es:")
+            for linea in lineas:
+                print(linea)
 
-        # Numero de Linea a eliminar
-        respuesta = input("¿Digite El número de línea?: ")
-        if respuesta.lower() != "":
-            delete_line(archivo, int(respuesta))
+            # Numero de Linea a eliminar
+            respuesta = input("¿Digite El número de línea?: ")
+            if respuesta.lower() != "":
+                delete_line(archivo, int(respuesta))
 
-        respuesta = input("¿Desea Salir? (S/N): ")
-        if respuesta.lower() != "s":
-            break
-    else:
-        print("El archivo no existe. Intente nuevamente.")
+            respuesta = input("¿Desea Salir? (S/N): ")
+            if respuesta.lower() != "s":
+                break
+        else:
+            print("El archivo no existe. Intente nuevamente.")
+    except ValueError:
+            print("Valor no valido")
 
 # EOF

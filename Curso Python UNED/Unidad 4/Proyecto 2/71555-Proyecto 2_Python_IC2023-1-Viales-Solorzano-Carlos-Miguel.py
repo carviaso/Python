@@ -12,8 +12,11 @@ validate_email = lambda email: '@' in email and '.' in email.split('@')[1]
 validate_birthyear = lambda year: datetime.now().year - year >= 18
 
 
+# ---------------------------------------------------------------------------------------------
 # Función para validar la provincia
+# ---------------------------------------------------------------------------------------------
 #validate_province = lambda province: province in ["San Jose", "Alajuela", "Cartago", "Heredia", "Guanacaste", "Puntarenas", "Limon"]
+# ---------------------------------------------------------------------------------------------
 def validar_provincia(provincia):
     provincias_validas = ["San Jose", "Alajuela", "Cartago", "Heredia", "Guanacaste", "Puntarenas", "Limon"]
     filtro = filter(lambda x: x.lower() == provincia.lower(), provincias_validas)

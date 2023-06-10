@@ -4,6 +4,8 @@ Conjunto de funciones
 import math
 import os
 
+
+# ---------------------------------------------------------------------------------------------
 def calcular_velocidad_angular(f):
     """Función para resolver fórmula de la velocidad angular (w)
     la formula es:
@@ -16,6 +18,7 @@ def calcular_velocidad_angular(f):
     return w
 
 
+# ---------------------------------------------------------------------------------------------
 def calcular_Periodo(f):
     """Funcion para calcular Periodo (T)
     La formula es:
@@ -32,6 +35,7 @@ def calcular_Periodo(f):
     return periodo
 
 
+# ---------------------------------------------------------------------------------------------
 def Calcular_Fuerza_resultante(masa, aceleracion):
     """Funcion para calcular Frecuencia Resultante
     La formula es:
@@ -50,6 +54,7 @@ def Calcular_Fuerza_resultante(masa, aceleracion):
     return fr
 
 
+# ---------------------------------------------------------------------------------------------
 def imprimir_centro(cadena):
     # Obtener la longitud de la cadena y de la consola
     longitud_cadena = len(cadena)
@@ -62,4 +67,3 @@ def imprimir_centro(cadena):
 
     # Imprimir la cadena centrada
     print(espacio_antes + cadena + espacio_despues)
-

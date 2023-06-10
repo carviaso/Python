@@ -16,10 +16,13 @@ import os
 from datetime import date
 import locale
 
+global nombre_archivo
 locale.setlocale(locale.LC_ALL, 'es_CR.UTF-8')
 
 
+# ---------------------------------------------------------------------------------------------
 # Funciones para el calculo de la Velocidad Angular
+# ---------------------------------------------------------------------------------------------
 def calcular_velocidad_angular(f):
     """Función para resolver fórmula de la velocidad angular (w)
     la formula es:
@@ -33,7 +36,9 @@ def calcular_velocidad_angular(f):
     return w
 
 
+# ---------------------------------------------------------------------------------------------
 # Funciones para el calculo de la Periodo(F)
+# ---------------------------------------------------------------------------------------------
 def calcular_Periodo(f):
     """Funcion para calcular Periodo (T)
     La formula es:
@@ -50,7 +55,9 @@ def calcular_Periodo(f):
     return periodo
 
 
+# ---------------------------------------------------------------------------------------------
 # Funciones para el calculo de la Fuerza Resultante
+# ---------------------------------------------------------------------------------------------
 def Calcular_Fuerza_resultante(masa, aceleracion):
     """Funcion para calcular Frecuencia Resultante
     La formula es:
@@ -68,7 +75,9 @@ def Calcular_Fuerza_resultante(masa, aceleracion):
     return fr
 
 
+# ---------------------------------------------------------------------------------------------
 # Funciones para el calculo de la Energia Cinetica
+# ---------------------------------------------------------------------------------------------
 def Calcular_Energía_cinetica(masa, velocidad):
     """
     Funcion para calcular Energía cinética (EC)
@@ -86,7 +95,9 @@ def Calcular_Energía_cinetica(masa, velocidad):
     return (0.5 * masa) * (velocidad ** 2)
 
 
+# ---------------------------------------------------------------------------------------------
 # Funciones para el calculo de la Energia Potencial
+# ---------------------------------------------------------------------------------------------
 def Calcular_Energía_Potencial(masa, altura, gravedad):
     """
     Funcion para calcular Energía potencial (EP)
@@ -106,7 +117,9 @@ def Calcular_Energía_Potencial(masa, altura, gravedad):
     return masa * gravedad * altura
 
 
+# ---------------------------------------------------------------------------------------------
 # Opcion 1
+# ---------------------------------------------------------------------------------------------
 def opcion1():
     # Periodo (T)
     print("\nBienvenido")
@@ -129,7 +142,9 @@ def opcion1():
         "tipo: Periodo (T), formula: T = 1 / f, parametros: f es {0}, resultado: {1}\n".format(str(f), str(result)))
 
 
+# ---------------------------------------------------------------------------------------------
 # opcion 2
+# ---------------------------------------------------------------------------------------------
 def opcion2():
     # Velocidad angular (w)
     print("\n")
@@ -152,7 +167,9 @@ def opcion2():
     archivo.writelines("tipo: {0}, formula: {1}, parametros: f es {2}, y resultado: {3}\n".format("Velocidad angular(w)", "W = (2 * 3.14) * f", str(f), str(result)) )
 
 
+# ---------------------------------------------------------------------------------------------
 # Opcion 3
+# ---------------------------------------------------------------------------------------------
 def opcion3():
     # Fuerza resultante(FR)
     print("\n")
@@ -180,7 +197,9 @@ def opcion3():
             str(m), str(a), str(result)))
 
 
+# ---------------------------------------------------------------------------------------------
 # Opcion 4
+# ---------------------------------------------------------------------------------------------
 def opcion4():
     # Energía cinética (EC)
     print("\n")
@@ -208,7 +227,9 @@ def opcion4():
             str(m), str(v), str(result)))
 
 
+# ---------------------------------------------------------------------------------------------
 # Opcion 5
+# ---------------------------------------------------------------------------------------------
 def opcion5():
     # Fuerza resultante(FR)
     print("\n")
@@ -238,8 +259,9 @@ def opcion5():
             str(m), str(h), str(g), str(result)))
 
 
-# ----------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------
 # Obtiene el mes en texto
+# ---------------------------------------------------------------------------------------------
 mes_texto = date.today().strftime('%B')
 
 """ Manejo de archivo """
@@ -283,27 +305,31 @@ while True:
     print("5. Energía potencial (EP)")
     print("X. Salir")
 
-    opcion: str = input("Elija una opción: ").upper()
+    try:
+        opcion: str = input("Elija una opción: ").upper()
 
-    if opcion == "1":
-        opcion1()
+        if opcion == "1":
+            opcion1()
 
-    elif opcion == "2":
-        opcion2()
+        elif opcion == "2":
+            opcion2()
 
-    elif opcion == "3":
-        opcion3()
+        elif opcion == "3":
+            opcion3()
 
-    elif opcion == "4":
-        opcion4()
+        elif opcion == "4":
+            opcion4()
 
-    elif opcion == "5":
-        opcion5()
+        elif opcion == "5":
+            opcion5()
 
-    elif opcion == "X":
-        break
-    else:
-        print("Opción inválida. Por favor, elija una opción del menú.")
+        elif opcion == "X":
+            break
+        else:
+            print("Opción inválida. Por favor, elija una opción del menú.")
+
+    except ValueError:
+            print("Valor no valido")
 
 
 # Cierre del archivo

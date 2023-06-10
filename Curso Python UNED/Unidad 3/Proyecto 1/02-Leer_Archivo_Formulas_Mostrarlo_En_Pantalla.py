@@ -1,4 +1,6 @@
+# ---------------------------------------------------------------------------------------------
 # Caso de estudio 1_Python_IC2023
+# ---------------------------------------------------------------------------------------------
 """
 Universidad Estatal a Distancia (UNED)
 Código 71555 - PROGRAMACIÓN BÁSICA CON PYTHON - IC2023
@@ -14,7 +16,9 @@ archivo = "archivo.txt"
 import os
 
 
+# ---------------------------------------------------------------------------------------------
 # Funcion de la lectura del archivo
+# ---------------------------------------------------------------------------------------------
 def procesar_archivo(nombre_archivo, separador, caracter_a_reemplazar, caracter_nuevo):
     with open(nombre_archivo, 'r') as archivo:
         line_num = 0
@@ -32,25 +36,29 @@ def procesar_archivo(nombre_archivo, separador, caracter_a_reemplazar, caracter_
 
 while True:
     """ Manejo de archivo """
-    # Solicita el nombre del archivo a crear
-    archivo = input("Ingrese el nombre del archivo a abrir: ")
+    try:
+        # Solicita el nombre del archivo a crear
+        archivo = input("Ingrese el nombre del archivo a abrir: ")
 
-    # Validar la extensión del archivo
-    if not archivo.endswith(".txt"):
-        archivo += ".txt"
+        # Validar la extensión del archivo
+        if not archivo.endswith(".txt"):
+            archivo += ".txt"
 
-    # Verificar si el archivo existe
-    if os.path.exists(archivo):
-        # Leer el contenido del archivo
-        lineas = procesar_archivo(archivo, ':', ',', ';')
-        print("El contenido del archivo es:")
-        for linea in lineas:
-            print(linea)
+        # Verificar si el archivo existe
+        if os.path.exists(archivo):
+            # Leer el contenido del archivo
+            lineas = procesar_archivo(archivo, ':', ',', ';')
+            print("El contenido del archivo es:")
+            for linea in lineas:
+                print(linea)
 
-        respuesta = input("¿Desea Salir? (S/N): ")
-        if respuesta.lower() != "s":
-            break
-    else:
-        print("El archivo no existe. Intente nuevamente.")
+            respuesta = input("¿Desea Salir? (S/N): ")
+            if respuesta.lower() != "s":
+                break
+        else:
+            print("El archivo no existe. Intente nuevamente.")
+    
+    except ValueError:
+            print("Valor no valido")
 
 # EOF

@@ -1,7 +1,10 @@
 # Importar librería para validar correo electrónico
 import re
 
+
+# ---------------------------------------------------------------------------------------------
 # Definir función de validación de nombre
+# ---------------------------------------------------------------------------------------------
 '''
 def validar_nombre(nombre):
     if len(nombre) < 9:
@@ -11,7 +14,10 @@ def validar_nombre(nombre):
 '''
 validar_nombre = lambda nombre: True if len(nombre) > 9 else False
 
+
+# ---------------------------------------------------------------------------------------------
 # Definir función de validación de correo electrónico
+# ---------------------------------------------------------------------------------------------
 '''
 def validar_correo(correo):
     patron_correo = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
@@ -23,7 +29,9 @@ def validar_correo(correo):
 validar_correo = lambda correo: True if re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', correo) else False
 
 
+# ---------------------------------------------------------------------------------------------
 # Definir función de validación de año de nacimiento
+# ---------------------------------------------------------------------------------------------
 def validar_anio_nacimiento(anio):
     edad = 2023 - int(anio)
     if edad < 18:
@@ -32,7 +40,9 @@ def validar_anio_nacimiento(anio):
     return True
 
 
+# ---------------------------------------------------------------------------------------------
 # Definir función de validación de provincia
+# ---------------------------------------------------------------------------------------------
 def validar_provincia(provincia):
     provincias = ["San Jose", "Alajuela", "Cartago", "Heredia", "Guanacaste", "Puntarenas", "Limon"]
     if provincia not in provincias:
@@ -42,7 +52,9 @@ def validar_provincia(provincia):
     return True
 
 
+# ---------------------------------------------------------------------------------------------
 # Definir función de validación de número de teléfono
+# ---------------------------------------------------------------------------------------------
 def validar_telefono(telefono):
     if len(telefono) != 8 or telefono[0] not in ["2", "4", "6", "7", "8"]:
         print("El número de teléfono debe tener 8 dígitos y comenzar con 2, 4, 6, 7 u 8.")
@@ -50,7 +62,9 @@ def validar_telefono(telefono):
     return True
 
 
+# ---------------------------------------------------------------------------------------------
 # Definir función principal para solicitar datos y validarlos
+# ---------------------------------------------------------------------------------------------
 def ingresar_datos():
     nombre = input("Ingrese su nombre completo: ")
     while not validar_nombre(nombre):

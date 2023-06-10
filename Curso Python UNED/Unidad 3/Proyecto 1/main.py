@@ -18,6 +18,7 @@ import locale
 locale.setlocale(locale.LC_ALL, 'es_CR.UTF-8')
 
 
+# ---------------------------------------------------------------------------------------------
 def calcular_velocidad_angular(f):
     """Función para resolver fórmula de la velocidad angular (w)
     la formula es:
@@ -30,6 +31,7 @@ def calcular_velocidad_angular(f):
     return w
 
 
+# ---------------------------------------------------------------------------------------------
 def calcular_Periodo(f):
     """Funcion para calcular Periodo (T)
     La formula es:
@@ -46,6 +48,7 @@ def calcular_Periodo(f):
     return periodo
 
 
+# ---------------------------------------------------------------------------------------------
 def Calcular_Fuerza_resultante(masa, aceleracion):
     """Funcion para calcular Frecuencia Resultante
     La formula es:
@@ -63,6 +66,7 @@ def Calcular_Fuerza_resultante(masa, aceleracion):
     return fr
 
 
+# ---------------------------------------------------------------------------------------------
 def Calcular_Energía_cinetica(masa, velocidad):
     """
     Funcion para calcular Energía cinética (EC)
@@ -80,6 +84,7 @@ def Calcular_Energía_cinetica(masa, velocidad):
     return (0.5 * m) * (v ** 2)
 
 
+# ---------------------------------------------------------------------------------------------
 def Calcular_Energía_Potencial(masa, altura, gravedad):
     """
     Funcion para calcular Energía potencial (EP)
@@ -99,6 +104,7 @@ def Calcular_Energía_Potencial(masa, altura, gravedad):
     return m * g * h
 
 
+# ---------------------------------------------------------------------------------------------
 def imprimir_centro(cadena):
     # Obtener la longitud de la cadena y de la consola
     longitud_cadena = len(cadena)
@@ -141,6 +147,7 @@ archivo.writelines("------------------------------------------------------------
 archivo.writelines("\n")
 
 """ MENU """
+# ---------------------------------------------------------------------------------------------
 while True:
     """ Introdución """
     # Imprimir la fecha de hoy en texto en la consola
@@ -163,138 +170,142 @@ while True:
     print("5. Energía potencial (EP)")
     print("X. Salir")
 
-    opcion: str = input("Elija una opción: ").upper()
+    try:
+        opcion: str = input("Elija una opción: ").upper()
 
-    if opcion == "1":
-        # Periodo (T)
-        print("\nBienvenido")
-        print("Función para resolver fórmula del Periodo (T)")
-        print("    La formula es:")
-        print("        T = 1 / f")
-        print("    Donde:")
-        print("        F = frecuencia (Hertz)")
-        print("\n")
+        if opcion == "1":
+            # Periodo (T)
+            print("\nBienvenido")
+            print("Función para resolver fórmula del Periodo (T)")
+            print("    La formula es:")
+            print("        T = 1 / f")
+            print("    Donde:")
+            print("        F = frecuencia (Hertz)")
+            print("\n")
 
-        # Solicitando datos para el calculo
-        f: float = float(input("Digite la Frecuencia: "))
+            # Solicitando datos para el calculo
+            f: float = float(input("Digite la Frecuencia: "))
 
-        # Calculando
-        result: float = calcular_Periodo(f)
+            # Calculando
+            result: float = calcular_Periodo(f)
 
-        # Mostrando resultado del calculo
-        print("Periodo (T) es", result, "\n\n")
+            # Mostrando resultado del calculo
+            print("Periodo (T) es", result, "\n\n")
 
-        archivo.writelines("Resolviendo Periodo (T), con la formula T = 1 / f, donde f es " + str(f) + " y el resultado es " + str(result) + "\n")
+            archivo.writelines("Resolviendo Periodo (T), con la formula T = 1 / f, donde f es " + str(f) + " y el resultado es " + str(result) + "\n")
 
-    elif opcion == "2":
-        # Velocidad angular (w)
-        print("\n")
-        print("Bienvenido")
-        print("Función para resolver fórmula de la velocidad angular (w)")
-        print("     La formula es:")
-        print("         W = (2 * 3.14) * f")
-        print("    Donde:")
-        print("        F = frecuencia (Hertz)")
-        print("\n")
+        elif opcion == "2":
+            # Velocidad angular (w)
+            print("\n")
+            print("Bienvenido")
+            print("Función para resolver fórmula de la velocidad angular (w)")
+            print("     La formula es:")
+            print("         W = (2 * 3.14) * f")
+            print("    Donde:")
+            print("        F = frecuencia (Hertz)")
+            print("\n")
 
-        # Solicitando datos para el calculo
-        f: float = float(input("Digite la Frecuencia: "))
+            # Solicitando datos para el calculo
+            f: float = float(input("Digite la Frecuencia: "))
 
-        # Calculando
-        result: float = calcular_velocidad_angular(f)
+            # Calculando
+            result: float = calcular_velocidad_angular(f)
 
-        # Mostrando resultado del calculo
-        print("El resultado de la Velocidad angular es:", result, "\n\n")
+            # Mostrando resultado del calculo
+            print("El resultado de la Velocidad angular es:", result, "\n\n")
 
-        archivo.writelines(
-            "Resolviendo Velocidad angular, con la formula W = (2 * 3.14) * f, donde f es " + str(f) + " y el resultado es " + str(
-                result) + "\n")
+            archivo.writelines(
+                "Resolviendo Velocidad angular, con la formula W = (2 * 3.14) * f, donde f es " + str(f) + " y el resultado es " + str(
+                    result) + "\n")
 
-    elif opcion == "3":
-        # Fuerza resultante(FR)
-        print("\n")
-        print("Bienvenido")
-        print("Función para resolver fórmula de la Fuerza resultante (FR)")
-        print("     La formula es:")
-        print("         FR = m * a")
-        print("    Donde:")
-        print("         FR = Fuerza resultante")
-        print("         M  = Masa")
-        print("         A  = Aceleracion")
-        print("\n")
+        elif opcion == "3":
+            # Fuerza resultante(FR)
+            print("\n")
+            print("Bienvenido")
+            print("Función para resolver fórmula de la Fuerza resultante (FR)")
+            print("     La formula es:")
+            print("         FR = m * a")
+            print("    Donde:")
+            print("         FR = Fuerza resultante")
+            print("         M  = Masa")
+            print("         A  = Aceleracion")
+            print("\n")
 
-        # Solicitando datos para el calculo
-        m: float = float(input("Digite la Masa: "))
-        a: float = float(input("Digite la Aceleración: "))
+            # Solicitando datos para el calculo
+            m: float = float(input("Digite la Masa: "))
+            a: float = float(input("Digite la Aceleración: "))
 
-        # Calculando
-        result = Calcular_Fuerza_resultante(masa=m, aceleracion=a)
+            # Calculando
+            result = Calcular_Fuerza_resultante(masa=m, aceleracion=a)
 
-        # Mostrando resultado del calculo
-        print("El resultado de la Fuerza resultante(FR) es", result, "\n\n")
+            # Mostrando resultado del calculo
+            print("El resultado de la Fuerza resultante(FR) es", result, "\n\n")
 
-        archivo.writelines(
-            "Resolviendo Fuerza resultante(FR), con la formula FR = m * a. Donde M es {0} y donde A es {1} y el resultado es {2}\n".format(
-                str(m), str(a), str(result)))
+            archivo.writelines(
+                "Resolviendo Fuerza resultante(FR), con la formula FR = m * a. Donde M es {0} y donde A es {1} y el resultado es {2}\n".format(
+                    str(m), str(a), str(result)))
 
-    elif opcion == "4":
-        # Energía cinética (EC)
-        print("\n")
-        print("Bienvenido")
-        print("Función para resolver fórmula de la Energía cinética (EC)")
-        print("     La formula es:")
-        print("         EC = (0.5 * m) * v^2")
-        print("    Donde:")
-        print("         EC = Energía cinética")
-        print("         M = Masa")
-        print("         V = Velocidad")
-        print("\n")
+        elif opcion == "4":
+            # Energía cinética (EC)
+            print("\n")
+            print("Bienvenido")
+            print("Función para resolver fórmula de la Energía cinética (EC)")
+            print("     La formula es:")
+            print("         EC = (0.5 * m) * v^2")
+            print("    Donde:")
+            print("         EC = Energía cinética")
+            print("         M = Masa")
+            print("         V = Velocidad")
+            print("\n")
 
-        # Solicitando datos para el calculo
-        m: float = float(input("Digite la Masa: "))
-        v: float = float(input("Digite la Velocidad: "))
+            # Solicitando datos para el calculo
+            m: float = float(input("Digite la Masa: "))
+            v: float = float(input("Digite la Velocidad: "))
 
-        # Calculando
-        result = Calcular_Energía_cinetica(masa=m, velocidad=v)
+            # Calculando
+            result = Calcular_Energía_cinetica(masa=m, velocidad=v)
 
-        # Mostrando resultado del calculo
-        print("El resultado de la Energía cinética (EC) es", result, "\n\n")
+            # Mostrando resultado del calculo
+            print("El resultado de la Energía cinética (EC) es", result, "\n\n")
 
-        archivo.writelines(
-            "Resolviendo Energía cinética (EC), con la formula EC = (0.5 * m) * v^2. Donde M es {0} y donde V es {1} y el resultado es {2}\n".format(
-                str(m), str(v), str(result)))
+            archivo.writelines(
+                "Resolviendo Energía cinética (EC), con la formula EC = (0.5 * m) * v^2. Donde M es {0} y donde V es {1} y el resultado es {2}\n".format(
+                    str(m), str(v), str(result)))
 
-    elif opcion == "5":
-        # Fuerza resultante(FR)
-        print("\n")
-        print("--")
-        print("Función para resolver fórmula de la Energía potencial (EP)")
-        print("     La formula es:")
-        print("         EP = m * g * h")
-        print("    Donde:")
-        print("         EP = Energía potencial (EP)")
-        print("         M  = Masa en kg")
-        print("         G  = Gravedad (9.8) donde gravedad en m/s^2")
-        print("         H  = Altura en metros")
-        print("\n--")
+        elif opcion == "5":
+            # Fuerza resultante(FR)
+            print("\n")
+            print("--")
+            print("Función para resolver fórmula de la Energía potencial (EP)")
+            print("     La formula es:")
+            print("         EP = m * g * h")
+            print("    Donde:")
+            print("         EP = Energía potencial (EP)")
+            print("         M  = Masa en kg")
+            print("         G  = Gravedad (9.8) donde gravedad en m/s^2")
+            print("         H  = Altura en metros")
+            print("\n--")
 
-        # Solicitando datos para el calculo
-        m: float = float(input("Digite la Masa: "))
-        h: float = float(input("Digite la Altura: "))
-        g: float = float(input("Digite la Gravedad: "))
+            # Solicitando datos para el calculo
+            m: float = float(input("Digite la Masa: "))
+            h: float = float(input("Digite la Altura: "))
+            g: float = float(input("Digite la Gravedad: "))
 
-        # Calculando
-        result = Calcular_Energía_Potencial(masa=m, altura=h, gravedad=g)
+            # Calculando
+            result = Calcular_Energía_Potencial(masa=m, altura=h, gravedad=g)
 
-        # Mostrando resultado del calculo
-        print("El resultado de la Energía potencial (EP) es", result, "\n\n")
+            # Mostrando resultado del calculo
+            print("El resultado de la Energía potencial (EP) es", result, "\n\n")
 
-        archivo.writelines(
-            "Resolviendo Energía potencial (EP), con la formula 'EP = m * g * h'. Donde M es {0}, donde H es {1} y donde G es {2} y el resultado es {3}\n".format(
-                str(m), str(h), str(g), str(result)))
+            archivo.writelines(
+                "Resolviendo Energía potencial (EP), con la formula 'EP = m * g * h'. Donde M es {0}, donde H es {1} y donde G es {2} y el resultado es {3}\n".format(
+                    str(m), str(h), str(g), str(result)))
 
-    elif opcion == "X":
-        archivo.close()
-        break
-    else:
-        print("Opción inválida. Por favor, elija una opción del menú.")
+        elif opcion == "X":
+            archivo.close()
+            break
+        else:
+            print("Opción inválida. Por favor, elija una opción del menú.")
+
+    except ValueError:
+            print("Valor no valido")

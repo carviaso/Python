@@ -18,7 +18,7 @@ venv/Scripts/activate.bat
 ### Example:
 
 ```
-main.py
+# main.py
 
 # Import base64 Module
 import base64
